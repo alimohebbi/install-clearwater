@@ -1,0 +1,69 @@
+---
+- hosts: bono_hosts
+  remote_user: ubuntu
+  name: "Install bono packages"
+  tasks:
+  - name: "Intalling bono"
+    apt:
+     name: bono
+  - name: "Intalling restund"
+    apt:
+     name: restund
+
+- hosts: sprout_hosts
+  remote_user: ubuntu
+  name: "Install sprout packages"
+  tasks:
+  - name: "Intalling sprout"
+    apt:
+     name: sprout
+
+- hosts: dime_hosts
+  remote_user: ubuntu
+  name: "Install dime packages"
+  tasks:
+  - name: "Intalling dime"
+    apt:
+     name: dime
+  - name: "Installing provision tool"
+    apt:
+     name: clearwater-prov-tools
+
+- hosts: homer_hosts
+  remote_user: ubuntu
+  name: "Install bono packages"
+  tasks:
+  - name: "Intalling homer"
+    apt:
+     name: homer
+
+- hosts: vellum_hosts
+  remote_user: ubuntu
+  name: "Install vellum packages"
+  tasks:
+  - name: "Intalling vellum"
+    apt:
+     name: vellum
+
+- hosts: ellis_hosts
+  remote_user: ubuntu
+  name: "Install ellis packages"
+  tasks:
+  - name: "Intalling ellis"
+    apt:
+     name: ellis
+
+
+- hosts: clearwater_hosts
+  remote_user: ubuntu
+  name: Installing Clearwater manager and snmpd
+  tasks:
+  - name: "Intalling manager"
+    apt:
+     name: clearwater-management 
+  - name: "Intalling snmpd"
+    apt:
+     name: clearwater-snmpd
+  
+
+  

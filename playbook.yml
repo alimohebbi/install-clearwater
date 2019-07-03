@@ -1,0 +1,12 @@
+---
+- hosts: clearwater_hosts
+  remote_user: ubuntu
+  name: Installing common features
+  vars:
+  - etcd_address: 172.16.0.32
+  roles:
+  - common
+
+- name: Including package installation playbook
+  include: package_installation.yml
+

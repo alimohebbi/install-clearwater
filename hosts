@@ -1,0 +1,10 @@
+[bono_hosts]
+192.168.200.186  local_ip=172.16.0.91 public_ip=192.168.200.186 host_name=bono-1
+
+[sprout_hosts]
+192.168.200.137  local_ip=172.16.0.86 public_ip=192.168.200.137 host_name=sprout-1
+
+[clearwater_hosts:children]
+bono_hosts
+sprout_hosts
+

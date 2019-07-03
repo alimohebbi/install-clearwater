@@ -1,0 +1,36 @@
+---
+- name: Copy repository list
+  become: true
+  copy:
+   src: files/clearwater.list
+   dest: /etc/apt/sources.list.d/
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+
+- name: Add repository to apt
+  become: true
+  shell: "{{item}}" 
+  with_items:
+  - curl -L http://repo.cw-ngv.com/repo_key | sudo apt-key add -
+  - apt-key finger
+  - apt-get update
+
+- name: Make clearwater dir
+  become: true
+  file:
+    path: /etc/clearwater
+    state: directory
+  tags:
+  - make_dir
+
+- name: Set local configs
+  become: true
+  template:
+   src: templates/local_config.js
+   dest: /etc/clearwater/local_config
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+  tags: 
+   - test
