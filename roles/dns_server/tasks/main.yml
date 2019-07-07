@@ -1,0 +1,32 @@
+---
+- name: "Intalling bind9"
+  become: true
+  apt:
+   name: bind9
+
+- name: copy dns server config to host
+  become: true
+  copy:
+   src: files/db.curix.ch
+   dest: /etc/bind/db.curix.ch
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+
+- name: copy dns server config to host
+  become: true
+  copy:
+   src: files/named.conf.local
+   dest: /etc/bind/named.conf.local
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+
+- name: Restarts bind9 service
+  become: true
+  sysvinit:
+   name: bind9
+   state: restarted
+
+
+

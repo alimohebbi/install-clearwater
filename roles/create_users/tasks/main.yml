@@ -1,0 +1,6 @@
+- name: Creating users by ellis
+  become: true
+  shell: bash -c "export PATH=/usr/share/clearwater/ellis/env/bin:$PATH ; cd /usr/share/clearwater/ellis/src/metaswitch/ellis/tools/; python create_numbers.py --start 6505550000 --count 1000"
+
+
+

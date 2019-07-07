@@ -1,10 +1,29 @@
 [bono_hosts]
-192.168.200.186  local_ip=172.16.0.91 public_ip=192.168.200.186 host_name=bono-1
+192.168.200.192  local_ip=172.16.0.82 public_ip=192.168.200.192 host_name=bono-1
 
 [sprout_hosts]
-192.168.200.137  local_ip=172.16.0.86 public_ip=192.168.200.137 host_name=sprout-1
+192.168.200.154  local_ip=172.16.0.57 public_ip=192.168.200.154 host_name=sprout-1
+
+[vellum_hosts]
+192.168.200.137  local_ip=172.16.0.113 public_ip=192.168.200.137 host_name=vellum-1
+
+[dime_hosts]
+192.168.200.158  local_ip=172.16.0.154 public_ip=192.168.200.158 host_name=dime-1
+
+[homer_hosts]
+192.168.200.186  local_ip=172.16.0.90 public_ip=192.168.200.186 host_name=homer-1
+
+[ellis_host]
+192.168.200.105  local_ip=172.16.0.119 public_ip=192.168.200.105 host_name=ellis
 
 [clearwater_hosts:children]
 bono_hosts
 sprout_hosts
+vellum_hosts
+dime_hosts
+homer_hosts
+ellis_host
 
+
+[dns_host]
+192.168.200.171  local_ip=172.16.0.32 public_ip=192.168.200.171 host_name=ns

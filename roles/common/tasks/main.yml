@@ -27,10 +27,20 @@
 - name: Set local configs
   become: true
   template:
-   src: templates/local_config.js
+   src: templates/local_config.j2
    dest: /etc/clearwater/local_config
    owner: ubuntu
    group: ubuntu
    mode: u=rwx,g=r,o=r
   tags: 
-   - test
+   - set_local
+
+- name: Set hostname
+  become: true
+  template:
+   src: templates/hostname
+   dest: /etc/hostname
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+

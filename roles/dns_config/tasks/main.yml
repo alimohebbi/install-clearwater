@@ -1,0 +1,26 @@
+---
+- name : Copy resolve file to hosts
+  become: true
+  template:
+   src: templates/dnsmasq.resolv.conf.j2
+   dest: /etc/dnsmasq.resolv.conf
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+  tags:
+  - dns_conf   
+
+- name : Copy dnsmasq file to hosts
+  become: true
+  copy:
+   src: files/dnsmasq
+   dest: /etc/default/dnsmasq
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+
+- name: Restart DNS masq
+  become: true
+  sysvinit:
+   name: dnsmasq
+   state: restarted

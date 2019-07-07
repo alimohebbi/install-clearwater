@@ -3,10 +3,39 @@
   remote_user: ubuntu
   name: Installing common features
   vars:
-  - etcd_address: 172.16.0.32
+  - etcd_address: 172.16.0.82,172.16.0.154,172.16.0.90,172.16.0.57,172.16.0.113
   roles:
   - common
 
 - name: Including package installation playbook
-  include: package_installation.yml
+  import_playbook: package_installation.yml
+
+- hosts: clearwater_hosts
+  remote_user: ubuntu
+  name: Set DNS configs
+  vars:
+  - dns_address: 192.168.200.171
+  roles:
+  - dns_config
+ 
+- name: Set DNS server configs
+  hosts: dns_host
+  remote_user: ubuntu
+  roles:
+  - role: dns_server
+    tags: 
+    - dns_server
+
+- hosts: ellis_host
+  remote_user: ubuntu
+  name: Creating users
+  roles:
+  - create_users
+
+
+
+
+
+
+
 

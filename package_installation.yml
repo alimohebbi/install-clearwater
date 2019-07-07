@@ -2,6 +2,7 @@
 - hosts: bono_hosts
   remote_user: ubuntu
   name: "Install bono packages"
+  become: true
   tasks:
   - name: "Intalling bono"
     apt:
@@ -13,6 +14,7 @@
 - hosts: sprout_hosts
   remote_user: ubuntu
   name: "Install sprout packages"
+  become: true
   tasks:
   - name: "Intalling sprout"
     apt:
@@ -20,6 +22,7 @@
 
 - hosts: dime_hosts
   remote_user: ubuntu
+  become: true
   name: "Install dime packages"
   tasks:
   - name: "Intalling dime"
@@ -31,7 +34,8 @@
 
 - hosts: homer_hosts
   remote_user: ubuntu
-  name: "Install bono packages"
+  become: true
+  name: "Install homer packages"
   tasks:
   - name: "Intalling homer"
     apt:
@@ -39,14 +43,16 @@
 
 - hosts: vellum_hosts
   remote_user: ubuntu
+  become: true
   name: "Install vellum packages"
   tasks:
   - name: "Intalling vellum"
     apt:
      name: vellum
 
-- hosts: ellis_hosts
+- hosts: ellis_host
   remote_user: ubuntu
+  become: true
   name: "Install ellis packages"
   tasks:
   - name: "Intalling ellis"
@@ -56,6 +62,7 @@
 
 - hosts: clearwater_hosts
   remote_user: ubuntu
+  become: true
   name: Installing Clearwater manager and snmpd
   tasks:
   - name: "Intalling manager"

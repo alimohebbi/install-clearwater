@@ -1,0 +1,2 @@
+{{hostvars[ansible_host]['host_name']}}.curix.ch
+
