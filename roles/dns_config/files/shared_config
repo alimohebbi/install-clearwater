@@ -1,0 +1,19 @@
+home_domain=curix.ch
+sprout_hostname=sprout.curix.ch
+sprout_registration_store=vellum.curix.ch
+hs_hostname=hs.curix.ch:8888
+hs_provisioning_hostname=hs.curix.ch:8889
+homestead_impu_store=vellum.curix.ch
+ralf_hostname=ralf.curix.ch:10888
+ralf_session_store=vellum.curix.ch
+xdms_hostname=homer.curix.ch:7888
+chronos_hostname=vellum.curix.ch
+cassandra_hostname=vellum.curix.ch
+
+# Keys
+signup_key=secret
+turn_workaround=secret
+ellis_api_key=secret
+ellis_cookie_key=secret
+
+

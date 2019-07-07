@@ -24,3 +24,18 @@
   sysvinit:
    name: dnsmasq
    state: restarted
+
+- name: Download shared configs
+  command: cw-config download shared_config
+
+- name: copy shared configs
+  become: true
+  copy:
+   src: files/shared_config
+   dest: ~/clearwater-config-manager/ubuntu/shared_config
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=r,o=r
+
+-name: Upload shared config
+ command: cw-config upload shared_config
