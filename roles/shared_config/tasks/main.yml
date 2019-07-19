@@ -1,0 +1,20 @@
+---
+- name: Download shared configs
+  shell: cw-config download shared_config --autoconfirm && sleep 5
+  tags:
+  - shared_config
+
+- name: copy shared configs
+  copy:
+   src: files/shared_config
+   dest: /home/ubuntu/clearwater-config-manager/ubuntu/shared_config
+   owner: ubuntu
+   group: ubuntu
+   mode: u=rwx,g=rwx,o=rwx
+  tags:
+  - shared_config
+
+- name: Upload shared config
+  shell: cw-config upload shared_config --autoconfirm && sleep 5
+  tags:
+  - shared_config

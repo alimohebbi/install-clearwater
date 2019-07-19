@@ -10,10 +10,22 @@ xdms_hostname=homer.curix.ch:7888
 chronos_hostname=vellum.curix.ch
 cassandra_hostname=vellum.curix.ch
 
+# Email server configuration
+
+smtp_smarthost=
+smtp_username=
+smtp_password=
+email_recovery_sender=
+
+
 # Keys
+
 signup_key=secret
 turn_workaround=secret
 ellis_api_key=secret
 ellis_cookie_key=secret
+
+ellis_hostname=ellis.curix.ch
+reg_max_expires=1800
 
 

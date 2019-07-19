@@ -1,20 +1,38 @@
-[bono_hosts]
-192.168.200.192  local_ip=172.16.0.82 public_ip=192.168.200.192 host_name=bono-1
-
 [sprout_hosts]
-192.168.200.154  local_ip=172.16.0.57 public_ip=192.168.200.154 host_name=sprout-1
+192.168.200.154  local_ip=172.16.0.92 public_ip=192.168.200.154 host_name=sprout-1
+192.168.200.136  local_ip=172.16.0.59 public_ip=192.168.200.136 host_name=sprout-2
+192.168.200.179  local_ip=172.16.0.233 public_ip=192.168.200.179 host_name=sprout-3
+192.168.200.162  local_ip=172.16.0.125 public_ip=192.168.200.162 host_name=sprout-4
+192.168.200.167  local_ip=172.16.0.104 public_ip=192.168.200.167 host_name=sprout-5
 
 [vellum_hosts]
-192.168.200.137  local_ip=172.16.0.113 public_ip=192.168.200.137 host_name=vellum-1
+192.168.200.137  local_ip=172.16.0.195 public_ip=192.168.200.137 host_name=vellum-1
+192.168.200.135  local_ip=172.16.0.150 public_ip=192.168.200.135 host_name=vellum-2
+192.168.200.134  local_ip=172.16.0.137 public_ip=192.168.200.134 host_name=vellum-3
+192.168.200.104  local_ip=172.16.0.247 public_ip=192.168.200.104 host_name=vellum-4
+192.168.200.185  local_ip=172.16.0.114 public_ip=192.168.200.185 host_name=vellum-5
 
 [dime_hosts]
-192.168.200.158  local_ip=172.16.0.154 public_ip=192.168.200.158 host_name=dime-1
+192.168.200.158  local_ip=172.16.0.135 public_ip=192.168.200.158 host_name=dime-1
+192.168.200.145  local_ip=172.16.0.49 public_ip=192.168.200.145 host_name=dime-2
+192.168.200.124  local_ip=172.16.0.234 public_ip=192.168.200.124 host_name=dime-3
+192.168.200.160  local_ip=172.16.0.78 public_ip=192.168.200.160 host_name=dime-4
+192.168.200.111  local_ip=172.16.0.44 public_ip=192.168.200.111 host_name=dime-5
 
 [homer_hosts]
-192.168.200.186  local_ip=172.16.0.90 public_ip=192.168.200.186 host_name=homer-1
+192.168.200.186  local_ip=172.16.0.170 public_ip=192.168.200.186 host_name=homer-1
+192.168.200.189  local_ip=172.16.0.152 public_ip=192.168.200.189 host_name=homer-2
+192.168.200.125  local_ip=172.16.0.190 public_ip=192.168.200.125 host_name=homer-3
+192.168.200.165  local_ip=172.16.0.116 public_ip=192.168.200.165 host_name=homer-4
+192.168.200.197  local_ip=172.16.0.169 public_ip=192.168.200.197 host_name=homer-5
 
 [ellis_host]
-192.168.200.105  local_ip=172.16.0.119 public_ip=192.168.200.105 host_name=ellis
+192.168.200.105  local_ip=172.16.0.106 public_ip=192.168.200.105 host_name=ellis
+
+[bono_hosts]
+192.168.200.192  local_ip=172.16.0.132 public_ip=192.168.200.192 host_name=bono-1
+#192.168.200.153  local_ip=172.16.0.28 public_ip=192.168.200.153 host_name=bono-2
+#192.168.200.100  local_ip=172.16.0.17 public_ip=192.168.200.100 host_name=bono-3
 
 [clearwater_hosts:children]
 bono_hosts
@@ -26,4 +44,4 @@ ellis_host
 
 
 [dns_host]
-192.168.200.171  local_ip=172.16.0.32 public_ip=192.168.200.171 host_name=ns
+#192.168.200.171  local_ip=172.16.0.32 public_ip=192.168.200.171 host_name=ns

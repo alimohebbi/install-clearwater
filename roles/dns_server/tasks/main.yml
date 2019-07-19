@@ -4,7 +4,7 @@
   apt:
    name: bind9
 
-- name: copy dns server config to host
+- name: copy dns server DB to host
   become: true
   copy:
    src: files/db.curix.ch
