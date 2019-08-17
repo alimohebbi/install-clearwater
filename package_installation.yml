@@ -1,5 +1,6 @@
 ---
 - hosts: bono_hosts
+  serial: 1
   remote_user: ubuntu
   name: "Install bono packages"
   become: true
@@ -12,6 +13,7 @@
      name: restund
 
 - hosts: sprout_hosts
+  serial: 1
   remote_user: ubuntu
   name: "Install sprout packages"
   become: true
@@ -22,6 +24,7 @@
 
 - hosts: dime_hosts
   remote_user: ubuntu
+  serial: 1
   become: true
   name: "Install dime packages"
   tasks:
@@ -42,6 +45,7 @@
      name: homer
 
 - hosts: vellum_hosts
+  serial: 1
   remote_user: ubuntu
   become: true
   name: "Install vellum packages"
@@ -61,6 +65,7 @@
 
 
 - hosts: clearwater_hosts
+  serial: 1
   remote_user: ubuntu
   become: true
   name: Installing Clearwater manager and snmpd

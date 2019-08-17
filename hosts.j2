@@ -1,0 +1,52 @@
+[sprout_hosts]
+192.168.200.154  local_ip={{ip['sprout-1']}} public_ip=192.168.200.154 host_name=sprout-1
+192.168.200.136  local_ip={{ip['sprout-2']}} public_ip=192.168.200.136 host_name=sprout-2
+192.168.200.179  local_ip={{ip['sprout-3']}} public_ip=192.168.200.179 host_name=sprout-3
+192.168.200.162  local_ip={{ip['sprout-4']}} public_ip=192.168.200.162 host_name=sprout-4
+192.168.200.167  local_ip={{ip['sprout-5']}} public_ip=192.168.200.167 host_name=sprout-5
+
+{{name}}
+[vellum_hosts]
+192.168.200.137  local_ip={{ip['vellum-1']}} public_ip=192.168.200.137 host_name=vellum-1
+192.168.200.135  local_ip={{ip['vellum-2']}} public_ip=192.168.200.135 host_name=vellum-2
+192.168.200.134  local_ip={{ip['vellum-3']}} public_ip=192.168.200.134 host_name=vellum-3
+192.168.200.104  local_ip={{ip['vellum-4']}} public_ip=192.168.200.104 host_name=vellum-4
+192.168.200.185  local_ip={{ip['vellum-5']}} public_ip=192.168.200.185 host_name=vellum-5
+
+[dime_hosts]
+192.168.200.158  local_ip={{ip['dime-1']}} public_ip=192.168.200.158 host_name=dime-1
+192.168.200.145  local_ip={{ip['dime-2']}} public_ip=192.168.200.145 host_name=dime-2
+192.168.200.124  local_ip={{ip['dime-3']}} public_ip=192.168.200.124 host_name=dime-3
+192.168.200.160  local_ip={{ip['dime-4']}} public_ip=192.168.200.160 host_name=dime-4
+192.168.200.111  local_ip={{ip['dime-5']}} public_ip=192.168.200.111 host_name=dime-5
+
+[homer_hosts]
+192.168.200.186  local_ip={{ip['homer-1']}} public_ip=192.168.200.186 host_name=homer-1
+192.168.200.189  local_ip={{ip['homer-2']}} public_ip=192.168.200.189 host_name=homer-2
+192.168.200.125  local_ip={{ip['homer-3']}} public_ip=192.168.200.125 host_name=homer-3
+192.168.200.165  local_ip={{ip['homer-4']}} public_ip=192.168.200.165 host_name=homer-4
+192.168.200.197  local_ip={{ip['homer-5']}} public_ip=192.168.200.197 host_name=homer-5
+
+[one_vellum]
+192.168.200.137  local_ip={{ip['vellum-1']}} public_ip=192.168.200.137 host_name=vellum-1
+
+[ellis_host]
+#192.168.200.105  local_ip={{ip['ellis']}} public_ip=192.168.200.105 host_name=ellis
+
+[bono_hosts]
+#192.168.200.192  local_ip={{ip['bono-1']}} public_ip=192.168.200.192 host_name=bono-1
+#192.168.200.153  local_ip={{ip['bono-2']}} public_ip=192.168.200.153 host_name=bono-2
+#192.168.200.100  local_ip={{ip['bono-3']}} public_ip=192.168.200.100 host_name=bono-3
+
+[clearwater_hosts:children]
+bono_hosts
+sprout_hosts
+vellum_hosts
+dime_hosts
+homer_hosts
+ellis_host
+
+
+[dns_host]
+#192.168.200.171  local_ip={{ip['ns']}} public_ip=192.168.200.171 host_name=ns
+

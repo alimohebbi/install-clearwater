@@ -3,7 +3,7 @@
   remote_user: ubuntu
   name: Installing common features
   vars:
-  - etcd_address: 172.16.0.57,172.16.0.245,172.16.0.49,172.16.0.164
+  - etcd_address: {{ip['homer-1']}},{{ip['vellum-1']}},{{ip['sprout-1']}},{{ip['dime-1']}}
   roles:
   - common
 
